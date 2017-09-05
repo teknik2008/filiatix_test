@@ -1,0 +1,31 @@
+{
+  "name": "filiatix_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "teknik2008",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^1.26.2",
+    "db-migrate": "^0.10.0-beta.23",
+    "db-migrate-mysql": "^1.1.10",
+    "dotenv": "^4.0.0",
+    "event-stream": "^3.3.4",
+    "install": "^0.10.1",
+    "koa": "^2.3.0",
+    "koa-body": "^2.3.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-cors": "0.0.16",
+    "koa-favicon": "^2.0.0",
+    "koa-router": "^7.2.1",
+    "koa-static": "^4.0.1",
+    "npm": "^5.4.0",
+    "readline-stream": "^1.0.2"
+  },
+  "engines": {
+    "node": "8.1.x"
+  }
+}
