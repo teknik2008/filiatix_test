@@ -6,6 +6,7 @@
     },
     "exclude": [
         "node_modules",
-        "public"
+        "public",
+        "client/node_modules"
     ]
 }
