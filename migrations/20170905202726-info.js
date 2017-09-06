@@ -23,7 +23,7 @@ exports._meta = {
 exports.up = function (db) {
   return db.createTable('info', {
     id: { type: 'int', primaryKey: true, autoIncrement: true },
-    line: { type: 'text', notNull: true },
+    line: { type: 'char', notNull: true,length:255 },
     file: {
       type: 'int',
       notNull: true,
@@ -37,7 +37,9 @@ exports.up = function (db) {
         mapping: 'id'
       }
     },
-  });
+  }).then((res)=>{
+    db.addIndex('info','index_info_line',['line'])
+  },(err)=>{return});
 };
 
 exports.down = function (db) {

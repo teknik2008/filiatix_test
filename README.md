@@ -10,6 +10,6 @@
 
 `npm run start` - запуск задания
 
-открыть в браузере адрес [http://localhost:8000](http://localhost:8000/)
+открыть в браузере адрес [http://localhost:8081](http://localhost:8081/)
 
 `ctrl+c` - остановка задания

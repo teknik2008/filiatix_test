@@ -25,7 +25,9 @@ exports.up = function (db) {
     id: { type: 'int', primaryKey: true, autoIncrement:true},
     name:{ type:'char',length:50,notNull :true},
     created_at:{type:'int',notNull :true}
-  });
+  }).then((res)=>{
+    db.addIndex('files','index_files_name',['name'])
+  },(err)=>{return});
 };
 
 exports.down = function (db) {

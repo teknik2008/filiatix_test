@@ -73,6 +73,7 @@ function saveFileToDb(filePath, filename) {
                 }
                 stream.pause();
                 let fileId = await toInsert();
+                line=line.substr(0,255);
                 let infoInsertData = { line: line, file: fileId };
                 let infoSql = 'INSERT INTO info SET :infoInsertData';
                 try {
@@ -92,7 +93,6 @@ function saveFileToDb(filePath, filename) {
                     }else{
                         resolve(lines);
                     }
-                    // resolve(lines);
                 })
             );
     })
@@ -130,7 +130,7 @@ exports.saveFileDataToDb = async (ctx) => {
         }
     }
     fs.unlink(path,(e)=>{
-        console.error(e)
+        if(e){console.error(e)}
     })
 
 }
