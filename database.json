@@ -1,13 +1,17 @@
 {
     "dev": {
-        "host": "localhost",
+        "host": {
+            "ENV": "DB_HOST"
+        },
         "user": {
             "ENV": "DB_USER"
         },
         "password": {
             "ENV": "DB_PASS"
         },
-        "database": "filiatix_test",
+        "database":{
+            "ENV": "DB_BASE"
+        },
         "driver": "mysql",
         "multipleStatements": true
     }
