@@ -15,12 +15,12 @@ let queryFormat = function (query, values) {
 };
 
 
-let pool = mysql.createPool({ host, user, password, database, connectionLimit ,queryFormat});
-pool.query('select 1+1').then(()=>{
+let pool_w = mysql.createPool({ host, user, password, database, connectionLimit ,queryFormat});
+pool_w.query('select 1+1').then(()=>{
     console.log('connect to db ok')
 }).catch(err=>{
     console.log('connect to db fail')
     console.log(err)
 });
 
-module.exports = pool;
+module.exports = pool_w;
